@@ -3,8 +3,9 @@ PLAN: "feat: Manifest, Store.Ensure/Read/Prune — large artifacts downloaded on
 TAG: v0.1.0
 EXECUTOR: jules
 REVIEWER: none
-STATUS: running
+STATUS: review
 SESSION: 10057753263230893942
+PR: https://github.com/webtyp/artifacts/pull/1
 ---
 
 > This plan is dispatched via the CodeJob workflow. See skill: agents-workflow.
