@@ -49,3 +49,9 @@ already exposes.
 All tests in `tests/` (`package tests`, public API only). They run natively against
 `net/http/httptest` with `files/mem` as the store: `net/http` is fine **in tests**, never in library
 code (`webtyp.com/fetch` is the client, and it is isomorphic).
+
+## Build-time files
+
+`build.go` (`//go:build !wasm`) runs inside the compiler (`sitec`) on the developer's machine:
+`BuildManifest` streams each declared file through SHA-256 with `os`/`io`. That stdlib use is
+legitimate there and never reaches the browser binary.

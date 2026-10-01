@@ -42,3 +42,26 @@ model, err := weights.Open(data)
 // 6. Delete old artifact versions after switching
 _ = store.Prune([]artifacts.Artifact{a})
 ```
+
+## Declaring artifacts at build time
+
+A project lists its artifacts in a build-only file of its root package; `sitec` measures each file,
+writes `/artifacts.json` and serves the bytes under `/artifacts/`:
+
+```go
+//go:build !wasm
+
+func Artifacts() []artifacts.Source {
+	return []artifacts.Source{{
+		ID: "decider-0.8b", Version: "q4-2026-09", File: "models/decider-0.8b.q4.wtypw",
+		Needs: device.Requirement{MinFree: 600 << 20, MinTier: device.TierSIMD},
+	}}
+}
+```
+
+| I want to… | Use |
+|---|---|
+| measure declared files and get the manifest | `artifacts.BuildManifest(root, srcs)` |
+| write the manifest JSON | `manifest.Encode()` |
+| know where the manifest is served | `artifacts.ManifestPath` (`/artifacts.json`) |
+
