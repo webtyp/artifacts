@@ -3,8 +3,9 @@ PLAN: "feat: Manifest, Store.Ensure/Read/Prune — large artifacts downloaded on
 TAG: v0.1.0
 EXECUTOR: jules
 REVIEWER: none
-STATUS: running
+STATUS: review
 SESSION: 10057753263230893942
+PR: https://github.com/webtyp/artifacts/pull/1
 ---
 
 > This plan is dispatched via the CodeJob workflow. See skill: agents-workflow.
@@ -184,3 +185,13 @@ for the target.
 - `grep -rn "\"encoding/json\"\|\"net/http\"\|map\[" --include=*.go . | grep -v _test` → empty.
 - `grep -rn "webtyp.com/opfs" --include=*.go .` → empty.
 - `grep -rn "type Artifacts struct" --include=*.go .` → empty (placeholder deleted).
+
+## Executor notes
+
+All steps of the plan were executed successfully and verified against all acceptance criteria:
+- Deleted placeholder `artifacts.go` and defined `Artifact`, `Manifest`, `Store`, `ErrNoSpace`, `ErrDigest`.
+- Implemented `ParseManifest` and `Manifest.Find` in `manifest.go` with full JSON validation using `webtyp.com/json`.
+- Implemented `Store` methods (`New`, `Has`, `Ensure`, `Read`, `Prune`) in `store.go` supporting 8 MiB resumable Range downloads, binary SHA-256 state tracking, verification, disk layout management, and explicit pruning.
+- Created `tests/artifacts_test.go` with complete test coverage meeting all test requirements.
+- Created `README.md` and `docs/ARCHITECTURE.md`.
+- Verified `gotest` and `gotest -tinygo` both pass cleanly.
