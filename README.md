@@ -51,7 +51,7 @@ writes `/artifacts.json` and serves the bytes under `/artifacts/`:
 ```go
 //go:build !wasm
 
-func Artifacts() []artifacts.Source {
+func ArtifactSources() []artifacts.Source {
 	return []artifacts.Source{{
 		ID: "decider-0.8b", Version: "q4-2026-09", File: "models/decider-0.8b.q4.wtypw",
 		Needs: device.Requirement{MinFree: 600 << 20, MinTier: device.TierSIMD},

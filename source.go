@@ -5,7 +5,7 @@ import "webtyp.com/device"
 // ManifestPath is where a build serves the manifest of an application's artifacts.
 const ManifestPath = "/artifacts.json"
 
-// Source is one artifact as a project declares it, with func Artifacts() []artifacts.Source in a
+// Source is one artifact as a project declares it, with func ArtifactSources() []artifacts.Source in a
 // build-only file of its root package. The compiler (sitec) reads File, measures it and writes the
 // manifest; the file itself is never loaded into memory.
 type Source struct {
