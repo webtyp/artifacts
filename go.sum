@@ -14,5 +14,5 @@ webtyp.com/model v0.1.9 h1:XpkNiIQbIVaFrbh4E/UqdIutHFNA92//KSP4M/owaSQ=
 webtyp.com/model v0.1.9/go.mod h1:OkyYeE3GOG8eAQGhd9wVsORAhr+xYj3q8avpoGXG25c=
 webtyp.com/pwa v0.1.1 h1:WlOjjwOfiXTxzWaEAJZzp1DzgDxL/LoiLtemr52eAik=
 webtyp.com/pwa v0.1.1/go.mod h1:gnpAT+pdfEUL9KST58CoqQQRSLda9N237QiXJGCJpqc=
-webtyp.com/weights v0.3.0 h1:FoQpfpDI8hyaRJXMAohQZ/S7MWL7bBs38ZR/uWFkooc=
-webtyp.com/weights v0.3.0/go.mod h1:KclzOcxyL4JJA9+6IqKVR6QKTIJFQCRSvBbzXQKmlnY=
+webtyp.com/weights v0.4.0 h1:ey3R0O6MkJLrv3RBWTtk9Fksf37NL97qDe7e1XKYCj8=
+webtyp.com/weights v0.4.0/go.mod h1:KclzOcxyL4JJA9+6IqKVR6QKTIJFQCRSvBbzXQKmlnY=
