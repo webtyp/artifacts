@@ -4,7 +4,7 @@ go 1.26.8
 
 require (
 	webtyp.com/device v0.1.0
-	webtyp.com/fetch v0.1.28
+	webtyp.com/fetch v0.1.29
 	webtyp.com/files v0.0.4
 	webtyp.com/fmt v1.0.0
 	webtyp.com/json v0.5.27
@@ -13,4 +13,7 @@ require (
 	webtyp.com/weights v0.4.0
 )
 
-require webtyp.com/await v0.1.2 // indirect
+require (
+	webtyp.com/await v0.1.2 // indirect
+	webtyp.com/filepath v0.1.0 // indirect
+)
