@@ -7,7 +7,7 @@ require (
 	webtyp.com/fetch v0.1.29
 	webtyp.com/files v0.0.4
 	webtyp.com/fmt v1.0.0
-	webtyp.com/json v0.5.27
+	webtyp.com/json v0.5.29
 	webtyp.com/model v0.2.2
 	webtyp.com/pwa v0.1.1
 	webtyp.com/weights v0.4.0
@@ -15,5 +15,6 @@ require (
 
 require (
 	webtyp.com/await v0.1.2 // indirect
+	webtyp.com/escape v0.1.0 // indirect
 	webtyp.com/filepath v0.1.0 // indirect
 )
