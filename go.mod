@@ -8,7 +8,7 @@ require (
 	webtyp.com/files v0.0.4
 	webtyp.com/fmt v1.0.0
 	webtyp.com/json v0.5.29
-	webtyp.com/model v0.2.2
+	webtyp.com/model v0.2.3
 	webtyp.com/pwa v0.2.0
 	webtyp.com/weights v0.4.0
 )
