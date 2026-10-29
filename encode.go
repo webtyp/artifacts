@@ -21,7 +21,6 @@ func (o manifestOut) EncodeFields(w model.FieldWriter) {
 	for _, a := range o.m.Artifacts {
 		arr.Object(artifactOut{a})
 	}
-	arr.Close()
 }
 
 type artifactOut struct{ a Artifact }
